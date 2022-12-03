@@ -147,36 +147,42 @@
                         android:layout_width="match_parent"
                         android:layout_height="12dp" />
 
-                    <RadioButton
-                        android:id="@+id/rb_papasMedianas"
+                    <RadioGroup
                         android:layout_width="match_parent"
-                        android:layout_height="23dp"
-                        android:fontFamily="@font/work_sans_medium"
-                        android:text="Pan Pizza"
-                        android:textColor="#261111"
-                        android:textSize="13sp"
-                        tools:ignore="TouchTargetSizeCheck" />
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" >
 
-                    <RadioButton
-                        android:id="@+id/rb_delgadaCrujiente"
-                        android:layout_width="match_parent"
-                        android:layout_height="23dp"
-                        android:fontFamily="@font/work_sans_medium"
-                        android:text="Delgada y Crujiente"
-                        android:textAlignment="textStart"
-                        android:textColor="#261111"
-                        android:textSize="13sp"
-                        tools:ignore="TouchTargetSizeCheck" />
+                        <RadioButton
+                            android:id="@+id/rb_arosCebolla"
+                            android:layout_width="match_parent"
+                            android:layout_height="23dp"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:text="Hut Cheese"
+                            android:textColor="#261111"
+                            android:textSize="13sp"
+                            tools:ignore="TouchTargetSizeCheck" />
 
-                    <RadioButton
-                        android:id="@+id/rb_arosCebolla"
-                        android:layout_width="match_parent"
-                        android:layout_height="23dp"
-                        android:fontFamily="@font/work_sans_medium"
-                        android:text="Hut Cheese"
-                        android:textColor="#261111"
-                        android:textSize="13sp"
-                        tools:ignore="TouchTargetSizeCheck" />
+                        <RadioButton
+                            android:id="@+id/rb_delgadaCrujiente"
+                            android:layout_width="match_parent"
+                            android:layout_height="23dp"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:text="Delgada y Crujiente"
+                            android:textAlignment="textStart"
+                            android:textColor="#261111"
+                            android:textSize="13sp"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <RadioButton
+                            android:id="@+id/rb_papasMedianas"
+                            android:layout_width="match_parent"
+                            android:layout_height="23dp"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:text="Pan Pizza"
+                            android:textColor="#261111"
+                            android:textSize="13sp"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </RadioGroup>
 
                 </LinearLayout>
 
@@ -218,67 +224,74 @@
                         android:layout_width="match_parent"
                         android:layout_height="12dp" />
 
-                    <RadioButton
-                        android:id="@+id/rb_Jamon"
+                    <RadioGroup
                         android:layout_width="match_parent"
-                        android:layout_height="23dp"
-                        android:fontFamily="@font/work_sans_medium"
-                        android:text="Jamon"
-                        android:textColor="#261111"
-                        android:textSize="13sp"
-                        tools:ignore="TouchTargetSizeCheck" />
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" >
 
-                    <RadioButton
-                        android:id="@+id/rb_pepsi"
-                        android:layout_width="match_parent"
-                        android:layout_height="23dp"
-                        android:fontFamily="@font/work_sans_medium"
-                        android:text="Suprema                                                        +L. 39.00"
-                        android:textColor="#261111"
-                        android:textSize="13sp"
-                        tools:ignore="TouchTargetSizeCheck" />
+                        <RadioButton
+                            android:id="@+id/rb_pepsi"
+                            android:layout_width="match_parent"
+                            android:layout_height="23dp"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:text="Suprema                                                        +L. 39.00"
+                            android:textColor="#261111"
+                            android:textSize="13sp"
+                            tools:ignore="TouchTargetSizeCheck" />
 
-                    <RadioButton
-                        android:id="@+id/rb_superSuprema"
-                        android:layout_width="match_parent"
-                        android:layout_height="23dp"
-                        android:fontFamily="@font/work_sans_medium"
-                        android:text="Super Suprema                                              +L. 39.00"
-                        android:textColor="#261111"
-                        android:textSize="13sp"
-                        tools:ignore="TouchTargetSizeCheck" />
+                        <RadioButton
+                            android:id="@+id/rb_4estaciones"
+                            android:layout_width="match_parent"
+                            android:layout_height="23dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:text="4 Estaciones                                                  +L. 39.00"
+                            android:textColor="#261111"
+                            android:textSize="13sp"
+                            tools:ignore="TouchTargetSizeCheck" />
 
-                    <RadioButton
-                        android:id="@+id/rb_meatLovers"
-                        android:layout_width="match_parent"
-                        android:layout_height="23dp"
-                        android:fontFamily="@font/work_sans_medium"
-                        android:text="Meat Lovers                                                   +L. 39.00"
-                        android:textColor="#261111"
-                        android:textSize="13sp"
-                        tools:ignore="TouchTargetSizeCheck" />
+                        <RadioButton
+                            android:id="@+id/rb_meatLovers"
+                            android:layout_width="match_parent"
+                            android:layout_height="23dp"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:text="Meat Lovers                                                   +L. 39.00"
+                            android:textColor="#261111"
+                            android:textSize="13sp"
+                            tools:ignore="TouchTargetSizeCheck" />
 
-                    <RadioButton
-                        android:id="@+id/rb_4estaciones"
-                        android:layout_width="match_parent"
-                        android:layout_height="23dp"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/work_sans_medium"
-                        android:text="4 Estaciones                                                  +L. 39.00"
-                        android:textColor="#261111"
-                        android:textSize="13sp"
-                        tools:ignore="TouchTargetSizeCheck" />
+                        <RadioButton
+                            android:id="@+id/rb_Jamon"
+                            android:layout_width="match_parent"
+                            android:layout_height="23dp"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:text="Jamon"
+                            android:textColor="#261111"
+                            android:textSize="13sp"
+                            tools:ignore="TouchTargetSizeCheck" />
 
-                    <RadioButton
-                        android:id="@+id/rb_pepperoniLovers"
-                        android:layout_width="match_parent"
-                        android:layout_height="23dp"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/work_sans_medium"
-                        android:text="Pepperoni Lovers                                           +L. 39.00"
-                        android:textColor="#261111"
-                        android:textSize="13sp"
-                        tools:ignore="TouchTargetSizeCheck" />
+                        <RadioButton
+                            android:id="@+id/rb_superSuprema"
+                            android:layout_width="match_parent"
+                            android:layout_height="23dp"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:text="Super Suprema                                              +L. 39.00"
+                            android:textColor="#261111"
+                            android:textSize="13sp"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <RadioButton
+                            android:id="@+id/rb_pepperoniLovers"
+                            android:layout_width="match_parent"
+                            android:layout_height="23dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:text="Pepperoni Lovers                                           +L. 39.00"
+                            android:textColor="#261111"
+                            android:textSize="13sp"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </RadioGroup>
+
                 </LinearLayout>
 
             </LinearLayout>
@@ -320,27 +333,33 @@
                         android:layout_width="match_parent"
                         android:layout_height="12dp" />
 
-                    <RadioButton
-                        android:id="@+id/rb_hutBonelessBarbecue"
+                    <RadioGroup
                         android:layout_width="match_parent"
-                        android:layout_height="23dp"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/work_sans_medium"
-                        android:text="Hut boneless barbecue 24"
-                        android:textColor="#261111"
-                        android:textSize="13sp"
-                        tools:ignore="TouchTargetSizeCheck" />
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" >
 
-                    <RadioButton
-                        android:id="@+id/rb_hutBonelessBuffalo"
-                        android:layout_width="match_parent"
-                        android:layout_height="23dp"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/work_sans_medium"
-                        android:text="Hut boneless buffalo 24"
-                        android:textColor="#261111"
-                        android:textSize="13sp"
-                        tools:ignore="TouchTargetSizeCheck" />
+                        <RadioButton
+                            android:id="@+id/rb_hutBonelessBarbecue"
+                            android:layout_width="match_parent"
+                            android:layout_height="23dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:text="Hut boneless barbecue 24"
+                            android:textColor="#261111"
+                            android:textSize="13sp"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <RadioButton
+                            android:id="@+id/rb_hutBonelessBuffalo"
+                            android:layout_width="match_parent"
+                            android:layout_height="23dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:text="Hut boneless buffalo 24"
+                            android:textColor="#261111"
+                            android:textSize="13sp"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </RadioGroup>
 
                 </LinearLayout>
 
@@ -383,47 +402,53 @@
                         android:layout_width="match_parent"
                         android:layout_height="12dp" />
 
-                    <RadioButton
-                        android:id="@+id/rb_pieManzana"
+                    <RadioGroup
                         android:layout_width="match_parent"
-                        android:layout_height="23dp"
-                        android:fontFamily="@font/work_sans_medium"
-                        android:text="7 Up 2 L."
-                        android:textColor="#261111"
-                        android:textSize="13sp"
-                        tools:ignore="TouchTargetSizeCheck" />
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" >
 
-                    <RadioButton
-                        android:id="@+id/rb_mirindaNaranja"
-                        android:layout_width="match_parent"
-                        android:layout_height="23dp"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/work_sans_medium"
-                        android:text="Mirinda Naranja 2 L."
-                        android:textColor="#261111"
-                        android:textSize="13sp"
-                        tools:ignore="TouchTargetSizeCheck" />
+                        <RadioButton
+                            android:id="@+id/rb_Pepsi"
+                            android:layout_width="match_parent"
+                            android:layout_height="23dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:text="Pepsi 2 L."
+                            android:textColor="#261111"
+                            android:textSize="13sp"
+                            tools:ignore="TouchTargetSizeCheck" />
 
-                    <RadioButton
-                        android:id="@+id/rb_Lipton"
-                        android:layout_width="match_parent"
-                        android:layout_height="23dp"
-                        android:fontFamily="@font/work_sans_medium"
-                        android:text="Lipton 2 L."
-                        android:textColor="#261111"
-                        android:textSize="13sp"
-                        tools:ignore="TouchTargetSizeCheck" />
+                        <RadioButton
+                            android:id="@+id/rb_pieManzana"
+                            android:layout_width="match_parent"
+                            android:layout_height="23dp"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:text="7 Up 2 L."
+                            android:textColor="#261111"
+                            android:textSize="13sp"
+                            tools:ignore="TouchTargetSizeCheck" />
 
-                    <RadioButton
-                        android:id="@+id/rb_Pepsi"
-                        android:layout_width="match_parent"
-                        android:layout_height="23dp"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/work_sans_medium"
-                        android:text="Pepsi 2 L."
-                        android:textColor="#261111"
-                        android:textSize="13sp"
-                        tools:ignore="TouchTargetSizeCheck" />
+                        <RadioButton
+                            android:id="@+id/rb_mirindaNaranja"
+                            android:layout_width="match_parent"
+                            android:layout_height="23dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:text="Mirinda Naranja 2 L."
+                            android:textColor="#261111"
+                            android:textSize="13sp"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <RadioButton
+                            android:id="@+id/rb_Lipton"
+                            android:layout_width="match_parent"
+                            android:layout_height="23dp"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:text="Lipton 2 L."
+                            android:textColor="#261111"
+                            android:textSize="13sp"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </RadioGroup>
 
                 </LinearLayout>
 

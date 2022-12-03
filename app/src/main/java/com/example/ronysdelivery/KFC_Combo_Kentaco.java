@@ -54,7 +54,7 @@ public class KFC_Combo_Kentaco extends AppCompatActivity {
         Intent pagina = new Intent(this, Perfil.class);
         startActivity(pagina);
     }
-    public void seleccionaradio() {
+    public void radioCombo_Kentaco() {
         if (Crb1.isChecked() == true) {
             Crb2.setEnabled(false);
             Crb3.setEnabled(false);
