@@ -321,35 +321,39 @@
                         android:layout_width="match_parent"
                         android:layout_height="12dp" />
 
-                    <CheckBox
-                        android:id="@+id/cb_extraTocino"
+                    <RadioButton
+                        android:id="@+id/rb_cocaCola2"
                         android:layout_width="match_parent"
                         android:layout_height="23dp"
+                        android:layout_weight="1"
                         android:fontFamily="@font/work_sans_medium"
                         android:text="Extra Peperoni                                              + L.22.00"
                         android:textColor="#261111"
                         android:textSize="13sp"
                         tools:ignore="TouchTargetSizeCheck" />
 
-                    <CheckBox
-                        android:id="@+id/cb_extraQueso"
+                    <RadioButton
+                        android:id="@+id/rb_cocaCola3"
                         android:layout_width="match_parent"
                         android:layout_height="23dp"
+                        android:layout_weight="1"
                         android:fontFamily="@font/work_sans_medium"
                         android:text="Extra Queso                                                  + L.12.00"
                         android:textColor="#261111"
                         android:textSize="13sp"
                         tools:ignore="TouchTargetSizeCheck" />
 
-                    <CheckBox
-                        android:id="@+id/cb_Nuggets"
+                    <RadioButton
+                        android:id="@+id/rb_cocaCola4"
                         android:layout_width="match_parent"
                         android:layout_height="23dp"
+                        android:layout_weight="1"
                         android:fontFamily="@font/work_sans_medium"
                         android:text="Salsa Ranch                                                  + L.20.00"
                         android:textColor="#261111"
                         android:textSize="13sp"
                         tools:ignore="TouchTargetSizeCheck" />
+
                 </LinearLayout>
 
             </LinearLayout>
@@ -485,7 +489,8 @@
                     android:background="@drawable/borde_redondeado"
                     android:paddingTop="7dp"
                     android:textAlignment="center"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    tools:text="L.99.00" />
 
             </LinearLayout>
 
