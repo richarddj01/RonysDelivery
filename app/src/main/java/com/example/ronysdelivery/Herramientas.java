@@ -29,7 +29,7 @@ public class Herramientas {
         float prec = Float.parseFloat(price);
         float total = cantidad *prec;
         String Total = String.valueOf(total);
-        Total = "L.Culo"+Total ;
+        Total = "L."+Total ;
         return Total;
     }
 }
