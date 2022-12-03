@@ -148,9 +148,10 @@
                         android:layout_height="12dp" />
 
                     <RadioGroup
+                        android:id="@+id/grupo_receta_piezas"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1" >
+                        android:layout_weight="1">
 
                         <RadioButton
                             android:id="@+id/rb_piezaOriginal"
@@ -496,8 +497,8 @@
                     android:layout_marginLeft="37dp"
                     android:layout_weight="1"
                     android:background="@drawable/borde_redondeado"
-                    android:hint="L. 219"
                     android:paddingTop="7dp"
+                    android:text="L. 219"
                     android:textAlignment="center"
                     android:textSize="24sp" />
 

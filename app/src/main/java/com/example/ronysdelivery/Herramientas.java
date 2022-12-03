@@ -5,7 +5,7 @@ import android.widget.TextView;
 
 public class Herramientas {
     private TextView lbl_cantidad;
-    private int cantidad;
+    public int cantidad;
 
     public String productoAumentar(View view,String cant){
         cantidad = Integer.parseInt(cant);

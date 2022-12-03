@@ -14,7 +14,7 @@
         android:layout_weight="1"
         android:background="@drawable/borde_redondeado_naranja"
         android:fontFamily="@font/work_sans_bold"
-        android:onClick="iniciarSesion"
+        android:onClick="llevarKFC"
         android:paddingTop="10dp"
         android:text="Iniciar Sesión"
         android:textAlignment="center"
