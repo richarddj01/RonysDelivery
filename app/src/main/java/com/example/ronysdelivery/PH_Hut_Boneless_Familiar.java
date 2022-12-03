@@ -51,6 +51,7 @@ public class PH_Hut_Boneless_Familiar extends AppCompatActivity {
     }
 
     Herramientas herramientas = new Herramientas();
+
     public void productoAumentar(View view){
         lbl_cantidad = (TextView) findViewById(R.id.lbl_cantidad);
         String cant = lbl_cantidad.getText().toString();
@@ -80,6 +81,7 @@ public class PH_Hut_Boneless_Familiar extends AppCompatActivity {
         herramientas.cantidad = Integer.parseInt(lbl_cantidad.getText().toString());
         calcularTotal(view);
     }
+
     public void radioSeleccionado0(View view){
         precio = (TextView)  findViewById(R.id.lbl_comboPrecio);
         String price = precio.getText().toString();
@@ -108,4 +110,5 @@ public class PH_Hut_Boneless_Familiar extends AppCompatActivity {
             total.setText(herramientas.calcularTotal(view, price));
         }
     }
+
 }

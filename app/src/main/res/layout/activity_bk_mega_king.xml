@@ -299,7 +299,7 @@
                         tools:ignore="TouchTargetSizeCheck" />
 
                     <CheckBox
-                        android:id="@+id/cb_extraQueso"
+                        android:id="@+id/rb_extraQueso"
                         android:layout_width="match_parent"
                         android:layout_height="23dp"
                         android:fontFamily="@font/work_sans_medium"

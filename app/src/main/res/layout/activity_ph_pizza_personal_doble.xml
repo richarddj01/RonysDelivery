@@ -157,6 +157,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="23dp"
                             android:fontFamily="@font/work_sans_medium"
+                            android:onClick="radioSeleccionado0"
                             android:text="Papas Wedges                                             "
                             android:textColor="#261111"
                             android:textSize="13sp"
@@ -167,6 +168,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="23dp"
                             android:fontFamily="@font/work_sans_medium"
+                            android:onClick="radioSeleccionado199"
                             android:text="Hut Wings                                                     + L.199.00"
                             android:textColor="#261111"
                             android:textSize="13sp"
@@ -177,6 +179,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="23dp"
                             android:fontFamily="@font/work_sans_medium"
+                            android:onClick="radioSeleccionado99"
                             android:text="Pan de Ajo                                                    +  L.99.00"
                             android:textColor="#261111"
                             android:textSize="13sp"
@@ -187,6 +190,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="23dp"
                             android:fontFamily="@font/work_sans_medium"
+                            android:onClick="radioSeleccionado169"
                             android:text="Pechuricas                                                    + L.169.00"
                             android:textAlignment="textStart"
                             android:textColor="#261111"
@@ -244,6 +248,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="23dp"
                             android:fontFamily="@font/work_sans_medium"
+                            android:onClick="radioSeleccionado0"
                             android:text="Sprite"
                             android:textColor="#261111"
                             android:textSize="13sp"
@@ -254,6 +259,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="23dp"
                             android:fontFamily="@font/work_sans_medium"
+                            android:onClick="radioSeleccionado0"
                             android:text="Pepsi"
                             android:textColor="#261111"
                             android:textSize="13sp"
@@ -264,6 +270,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="23dp"
                             android:fontFamily="@font/work_sans_medium"
+                            android:onClick="radioSeleccionado0"
                             android:text="Agua"
                             android:textColor="#261111"
                             android:textSize="13sp"
@@ -274,6 +281,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="23dp"
                             android:fontFamily="@font/work_sans_medium"
+                            android:onClick="radioSeleccionado0"
                             android:text="Coca Cola"
                             android:textColor="#261111"
                             android:textSize="13sp"
@@ -321,35 +329,36 @@
                         android:layout_width="match_parent"
                         android:layout_height="12dp" />
 
-                    <CheckBox
-                        android:id="@+id/cb_extraTocino"
+                    <RadioGroup
                         android:layout_width="match_parent"
-                        android:layout_height="23dp"
-                        android:fontFamily="@font/work_sans_medium"
-                        android:text="Extra Peperoni                                              + L.22.00"
-                        android:textColor="#261111"
-                        android:textSize="13sp"
-                        tools:ignore="TouchTargetSizeCheck" />
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" >
 
-                    <CheckBox
-                        android:id="@+id/cb_extraQueso"
-                        android:layout_width="match_parent"
-                        android:layout_height="23dp"
-                        android:fontFamily="@font/work_sans_medium"
-                        android:text="Extra Queso                                                  + L.12.00"
-                        android:textColor="#261111"
-                        android:textSize="13sp"
-                        tools:ignore="TouchTargetSizeCheck" />
+                        <RadioButton
+                            android:id="@+id/cb_Nuggets"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:onClick="radioSeleccionado20"
+                            android:text="Salsa Ranch                                                  + L.20.00" />
 
-                    <CheckBox
-                        android:id="@+id/cb_Nuggets"
-                        android:layout_width="match_parent"
-                        android:layout_height="23dp"
-                        android:fontFamily="@font/work_sans_medium"
-                        android:text="Salsa Ranch                                                  + L.20.00"
-                        android:textColor="#261111"
-                        android:textSize="13sp"
-                        tools:ignore="TouchTargetSizeCheck" />
+                        <RadioButton
+                            android:id="@+id/rb_extraTocino"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:onClick="radioSeleccionado22"
+                            android:text="Extra Peperoni                                              + L.22.00" />
+
+                        <RadioButton
+                            android:id="@+id/rb_extraQueso"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:onClick="radioSeleccionado12"
+                            android:text="Extra Queso                                                  + L.12.00" />
+                    </RadioGroup>
+
                 </LinearLayout>
 
             </LinearLayout>
@@ -401,6 +410,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="23dp"
                             android:fontFamily="@font/work_sans_medium"
+                            android:onClick="radioSeleccionado67"
                             android:text="Hershey Pie                                                  + L.67.00"
                             android:textColor="#261111"
                             android:textSize="13sp"
@@ -411,6 +421,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="23dp"
                             android:fontFamily="@font/work_sans_medium"
+                            android:onClick="radioSeleccionado36"
                             android:text="Pie de Manzana                                            + L.38.00"
                             android:textColor="#261111"
                             android:textSize="13sp"
