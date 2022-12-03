@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/back_degradado"
+    tools:context=".PizzaHut">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="405dp"
+        android:layout_height="731dp"
+        android:contentDescription="@string/descripcion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="23dp" />
+
+            <ImageView
+                android:id="@+id/img_portadakfc"
+                android:layout_width="match_parent"
+                android:layout_height="197dp"
+                app:srcCompat="@mipmap/portadapizza" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="12dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_logo"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_weight="0.6"
+                    android:background="@drawable/borde_redondeado"
+                    app:srcCompat="@mipmap/pizzahutlogo" />
+
+                <TextView
+                    android:id="@+id/lbl_titulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/borde_redondeado"
+                    android:fontFamily="@font/work_sans_bold"
+                    android:text="PIZZA HUT"
+                    android:textAlignment="center"
+                    android:textColor="#261111"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/borde_redondeado"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lbl_descripcion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/work_sans_semibold"
+                    android:text="Llega en\n15-30 mins"
+                    android:textAlignment="center"
+                    android:textColor="#261111"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/lbl_envio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/work_sans_semibold"
+                    android:text="Envío\nL.15"
+                    android:textAlignment="center"
+                    android:textColor="#261111"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/lbl_minimo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/work_sans_semibold"
+                    android:text="Mínimo\nL.50"
+                    android:textAlignment="center"
+                    android:textColor="#261111"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="___________________________________________________________"
+                android:textColor="#FE7506" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="12dp" />
+
+            <TextView
+                android:id="@+id/lbl_combosbgr2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/work_sans_bold"
+                android:text="COMBOS"
+                android:textColor="#261111"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="12dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/borde_redondeado"
+                android:onClick="ph_MyBox"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_myBox"
+                    android:layout_width="226dp"
+                    android:layout_height="85dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="0.5"
+                    app:srcCompat="@mipmap/ph_my_box" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lbl_myBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:fontFamily="@font/work_sans_semibold"
+                        android:text="My Box"
+                        android:textColor="#CF5F05"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/lbl_myBoxDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/work_sans_medium"
+                        android:text="Disfruta de 1 Pizza rectangular dividida en 6 piezas, 4 palitroques y 1 bebida de tu elección."
+                        android:textColor="#261111"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/lbl_myBoxPrecio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:fontFamily="@font/work_sans_semibold"
+                        android:text="L.99"
+                        android:textColor="#CF5F05"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="25dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/borde_redondeado"
+                android:onClick="ph_PizzaPersonalDoble"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_panPizzaPersonalDoble"
+                    android:layout_width="226dp"
+                    android:layout_height="85dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="0.5"
+                    app:srcCompat="@mipmap/ph_2_combos_pan_pizza_personal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lbl_panPizzaPersonalDoble"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:fontFamily="@font/work_sans_semibold"
+                        android:text="Pan Pizza Personal Doble"
+                        android:textColor="#CF5F05"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/lbl_panPizzaPersonalDobleDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/work_sans_medium"
+                        android:text="Disfruta este excelente combo de 2 combos de pizza personales, 2 papas wedges, 2 bebidas medianas."
+                        android:textColor="#261111"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/lbl_panPizzaPersonalDoblePrecio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:fontFamily="@font/work_sans_semibold"
+                        android:text="L.199"
+                        android:textColor="#CF5F05"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_weight="0.5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/borde_redondeado"
+                android:onClick="ph_Pizza4Estaciones"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_pizza4Estaciones"
+                    android:layout_width="226dp"
+                    android:layout_height="85dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="0.5"
+                    app:srcCompat="@mipmap/ph_4_estaciones" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lbl_pizza4Estaciones"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:fontFamily="@font/work_sans_semibold"
+                        android:text="Pizza 4 Estaciones"
+                        android:textColor="#CF5F05"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/lbl_pizza4EstacionesDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/work_sans_medium"
+                        android:text="Nuestra deliciosa combinación de cuatro especialidades en una sola pizza, súper suprema, jamón..."
+                        android:textColor="#261111"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/lbl_pizza4EstacionesPrecio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:fontFamily="@font/work_sans_semibold"
+                        android:text="L.318"
+                        android:textColor="#CF5F05"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_weight="0.5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/borde_redondeado"
+                android:onClick="ph_PizzaSuprema"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_pizzaSuprema"
+                    android:layout_width="226dp"
+                    android:layout_height="85dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="0.5"
+                    app:srcCompat="@mipmap/ph_pizza_suprema" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lbl_pizzaSuprema"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:fontFamily="@font/work_sans_semibold"
+                        android:text="Pizza Suprema"
+                        android:textColor="#CF5F05"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/lbl_pizzaSupremaDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/work_sans_medium"
+                        android:text="Una deliciosa combinación: Pepperoni, carne de res y cerdo, champiñones, chile verde y cebolla."
+                        android:textColor="#261111"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/lbl_pizzaSupremaPrecio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:fontFamily="@font/work_sans_semibold"
+                        android:text="L.290"
+                        android:textColor="#CF5F05"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_weight="0.5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/borde_redondeado"
+                android:onClick="ph_PanPizzaPack"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_panPizzaPack"
+                    android:layout_width="226dp"
+                    android:layout_height="85dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="0.5"
+                    app:srcCompat="@mipmap/ph_pan_pizza_pack_2" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lbl_panPizzaPack"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:fontFamily="@font/work_sans_semibold"
+                        android:text="Pan Pizza Pack"
+                        android:textColor="#CF5F05"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/lbl_panPizzaPackDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/work_sans_medium"
+                        android:text="Disfruta de una Pan Pizza Gigante con 6 panes de ajo y una refrescante Pepsi 2 Litros."
+                        android:textColor="#261111"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/lbl_panPizzaPackPrecio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:fontFamily="@font/work_sans_semibold"
+                        android:text="L.389"
+                        android:textColor="#CF5F05"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_weight="0.5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/borde_redondeado"
+                android:onClick="ph_HutBonelessFamiliar"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_hutBonelessFamiliar"
+                    android:layout_width="226dp"
+                    android:layout_height="85dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="0.5"
+                    app:srcCompat="@mipmap/ph_hut_boneless_familiar" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lbl_hutBonelessFamiliar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:fontFamily="@font/work_sans_semibold"
+                        android:text="Hut Boneless Familiar"
+                        android:textColor="#CF5F05"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/lbl_hutBonelessFamiliarDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/work_sans_medium"
+                        android:text="Disfruta una pan pizza gigante de un ingrediente, 24 boneless, 12 pan de ajo y un refresco de 2 litros."
+                        android:textColor="#261111"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/lbl_hutBonelessFamiliarPrecio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:fontFamily="@font/work_sans_semibold"
+                        android:text="L.814"
+                        android:textColor="#CF5F05"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_weight="0.5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/borde_redondeado"
+                android:onClick="ph_TripleWowBox"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_tripleWowBox"
+                    android:layout_width="226dp"
+                    android:layout_height="85dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="0.5"
+                    app:srcCompat="@mipmap/ph_triple_wow_box" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lbl_tripleWowBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:fontFamily="@font/work_sans_semibold"
+                        android:text="Triple Wow Box"
+                        android:textColor="#CF5F05"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/lbl_tripleWowBoxDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/work_sans_medium"
+                        android:text="Saborea 2 exquisitas pizzas gigantes de 1 ingrediente, 12 deliciosas pechurricas y 10 crujientes..."
+                        android:textColor="#261111"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/lbl_tripleWowBoxPrecio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:fontFamily="@font/work_sans_semibold"
+                        android:text="L.749"
+                        android:textColor="#CF5F05"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_weight="0.5" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@id/scrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            android:backgroundTint="#f6f6f6"
+            app:fabCradleMargin="8dp"
+            app:fabCradleRoundedCornerRadius="50dp"
+            app:fabCradleVerticalOffset="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginRight="14dp">
+
+                <LinearLayout
+                    android:id="@+id/inicioBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:onClick="inicio"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/btnHome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@mipmap/home" />
+
+                    <TextView
+                        android:id="@+id/lblInicio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/work_sans_semibold"
+                        android:text="Inicio"
+                        android:textAlignment="center"
+                        android:textColor="#261111"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/historialBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:onClick="historial"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/btnHistorial"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@mipmap/shopping_list" />
+
+                    <TextView
+                        android:id="@+id/lblHistorialPedidos2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/work_sans_semibold"
+                        android:text="Historial"
+                        android:textAlignment="center"
+                        android:textColor="#261111"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/invisibleBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:id="@+id/btnInvisible"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@mipmap/shopping_list" />
+
+                    <TextView
+                        android:id="@+id/lblInvisible"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Inicio"
+                        android:textAlignment="center"
+                        android:textColor="#676767"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/soporteBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:onClick="soporte"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/btnSupport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@mipmap/support" />
+
+                    <TextView
+                        android:id="@+id/lblSoporte"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/work_sans_semibold"
+                        android:text="Soporte"
+                        android:textAlignment="center"
+                        android:textColor="#261111"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/perfilBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:onClick="perfil"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/btnUser2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@mipmap/user2" />
+
+                    <TextView
+                        android:id="@+id/lblPerfil2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/work_sans_semibold"
+                        android:text="Perfil"
+                        android:textAlignment="center"
+                        android:textColor="#261111"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#ff5e00"
+            android:contentDescription="@string/descripcion"
+            android:elevation="3dp"
+            android:onClick="pedidos"
+            android:src="@mipmap/shopping_cart"
+            app:backgroundTint="#ff5e00"
+            app:layout_anchor="@id/app_bar">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/back_degradado"
+    tools:context=".Registrarse">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/descripcion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+
+            <TextView
+                android:id="@+id/lblEditarPerfil"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/work_sans_bold"
+                android:text="Registro"
+                android:textAlignment="center"
+                android:textColor="#261111"
+                android:textSize="50sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+
+            <ImageView
+                android:id="@+id/imgEdicion"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:srcCompat="@mipmap/verify" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/borde_redondeado_blanco3"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgNombreApellido"
+                    android:layout_width="90dp"
+                    android:layout_height="60dp"
+                    app:srcCompat="@mipmap/id_card" />
+
+                <EditText
+                    android:id="@+id/txtNombreApellido"
+                    android:layout_width="match_parent"
+                    android:layout_height="63dp"
+                    android:background="@drawable/borde_redondeado_blanco3"
+                    android:ems="10"
+                    android:fontFamily="@font/work_sans_semibold"
+                    android:hint="Nombre y Apellido"
+                    android:inputType="textPersonName" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/borde_redondeado_blanco3"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgTelefono"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="6dp"
+                    app:srcCompat="@mipmap/smartphone" />
+
+                <EditText
+                    android:id="@+id/txtTelefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="63dp"
+                    android:background="@drawable/borde_redondeado_blanco3"
+                    android:ems="10"
+                    android:fontFamily="@font/work_sans_semibold"
+                    android:hint="Número de Teléfono"
+                    android:inputType="number" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/borde_redondeado_blanco3"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgDireccion"
+                    android:layout_width="90dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="8dp"
+                    app:srcCompat="@mipmap/location" />
+
+                <EditText
+                    android:id="@+id/txtDireccion"
+                    android:layout_width="match_parent"
+                    android:layout_height="63dp"
+                    android:background="@drawable/borde_redondeado_blanco3"
+                    android:ems="10"
+                    android:fontFamily="@font/work_sans_semibold"
+                    android:hint="Dirección"
+                    android:inputType="textPersonName" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/borde_redondeado_blanco3"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgCorreo"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    app:srcCompat="@mipmap/email" />
+
+                <EditText
+                    android:id="@+id/txtCorreo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="63dp"
+                    android:background="@drawable/borde_redondeado_blanco3"
+                    android:ems="10"
+                    android:fontFamily="@font/work_sans_semibold"
+                    android:hint="Correo Electrónico"
+                    android:inputType="textEmailAddress" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/borde_redondeado_blanco3"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgContrasena"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    app:srcCompat="@mipmap/padlock" />
+
+                <EditText
+                    android:id="@+id/txtContrasena2"
+                    android:layout_width="match_parent"
+                    android:layout_height="63dp"
+                    android:background="@drawable/borde_redondeado_blanco3"
+                    android:ems="10"
+                    android:fontFamily="@font/work_sans_semibold"
+                    android:hint="Contraseña"
+                    android:inputType="textPassword" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/borde_redondeado_blanco3"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ingConfirmarContrasena"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    app:srcCompat="@mipmap/padlock" />
+
+                <EditText
+                    android:id="@+id/txtConfirmarContrasena"
+                    android:layout_width="match_parent"
+                    android:layout_height="63dp"
+                    android:background="@drawable/borde_redondeado_blanco3"
+                    android:ems="10"
+                    android:fontFamily="@font/work_sans_semibold"
+                    android:hint="Confirmar Contraseña"
+                    android:inputType="textPassword" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="45dp" />
+
+            <TextView
+                android:id="@+id/btn_GuardarCambios"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:layout_weight="1"
+                android:background="@drawable/borde_redondeado_cafe"
+                android:fontFamily="@font/work_sans_bold"
+                android:onClick="registrar"
+                android:paddingTop="10dp"
+                android:text="Registrarse"
+                android:textAlignment="center"
+                android:textColor="#FE7506"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.937" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+
+            <TextView
+                android:id="@+id/btn_IniciarSesion3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:fontFamily="@font/work_sans_bold"
+                android:onClick="iniciarSesion"
+                android:text="¿Ya tienes cuenta? Inicia Sesión"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="65dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

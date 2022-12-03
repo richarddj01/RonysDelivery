@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/back_degradado"
+    tools:context=".IniciarSesion">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/descripcion"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="45dp" />
+
+        <TextView
+            android:id="@+id/lblIniciarSesion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/work_sans_bold"
+            android:text="Iniciar Sesión"
+            android:textAlignment="center"
+            android:textColor="#261111"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <ImageView
+            android:id="@+id/imgUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/user" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <EditText
+            android:id="@+id/txtCorreo2"
+            android:layout_width="335dp"
+            android:layout_height="63dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/borde_redondeado_blanco3"
+            android:ems="10"
+            android:fontFamily="@font/work_sans_semibold"
+            android:hint="     Correo Electrónico"
+            android:inputType="textEmailAddress" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <EditText
+            android:id="@+id/txtContrasena2"
+            android:layout_width="335dp"
+            android:layout_height="63dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/borde_redondeado_blanco3"
+            android:ems="10"
+            android:fontFamily="@font/work_sans_semibold"
+            android:hint="     Contraseña"
+            android:inputType="textPassword" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="60dp" />
+
+        <TextView
+            android:id="@+id/btn_IniciarSesion2"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:background="@drawable/borde_redondeado_cafe"
+            android:fontFamily="@font/work_sans_bold"
+            android:onClick="consultarCredenciales"
+            android:paddingTop="10dp"
+            android:text="Ingresar"
+            android:textAlignment="center"
+            android:textColor="#FE7506"
+            android:textSize="24dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="35dp" />
+
+        <TextView
+            android:id="@+id/btn_Registrarse3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:fontFamily="@font/work_sans_bold"
+            android:onClick="registrarse"
+            android:text="Registrarse"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="65dp" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

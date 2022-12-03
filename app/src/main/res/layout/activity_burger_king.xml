@@ -1,0 +1,771 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/back_degradado"
+    tools:context=".BurgerKing">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="405dp"
+        android:layout_height="731dp"
+        android:contentDescription="@string/descripcion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="23dp" />
+
+            <ImageView
+                android:id="@+id/img_portada"
+                android:layout_width="match_parent"
+                android:layout_height="197dp"
+                android:contentDescription="@string/descripcion"
+                app:srcCompat="@mipmap/portadaburger" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="12dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_logo"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/borde_redondeado"
+                    app:srcCompat="@mipmap/burgerkinglogo" />
+
+                <TextView
+                    android:id="@+id/lbl_titulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/borde_redondeado"
+                    android:fontFamily="@font/work_sans_bold"
+                    android:text="BURGER KING"
+                    android:textAlignment="center"
+                    android:textColor="#261111"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/borde_redondeado"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lbl_descripcion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/work_sans_semibold"
+                    android:text="Llega en\n15-30 mins"
+                    android:textAlignment="center"
+                    android:textColor="#261111"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/lbl_envio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/work_sans_semibold"
+                    android:text="Envío\nL.15"
+                    android:textAlignment="center"
+                    android:textColor="#261111"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/lbl_minimo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/work_sans_semibold"
+                    android:text="Mínimo\nL.50"
+                    android:textAlignment="center"
+                    android:textColor="#261111"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lbl_linea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="___________________________________________________________"
+                android:textColor="#FE7506" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="12dp" />
+
+            <TextView
+                android:id="@+id/lbl_combosbgr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/work_sans_bold"
+                android:text="COMBOS"
+                android:textColor="#261111"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="12dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/borde_redondeado"
+                android:onClick="bk_whooperCombo"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_whooperCombo"
+                    android:layout_width="226dp"
+                    android:layout_height="85dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="0.5"
+                    app:srcCompat="@mipmap/bk_whopper_combo" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lbl_whooperCombo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:fontFamily="@font/work_sans_semibold"
+                        android:text="Whooper Combo"
+                        android:textColor="#CF5F05"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/lbl_whooperComboDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/work_sans_medium"
+                        android:text="Nuestro WHOOPER tiene un ¼ lb de sabrosa carne de res asada a la parrilla cubierta con jugosos..."
+                        android:textColor="#261111"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/lbl_whooperComboPrecio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:fontFamily="@font/work_sans_semibold"
+                        android:text="L.185"
+                        android:textColor="#CF5F05"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="25dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/borde_redondeado"
+                android:onClick="bk_whooperTexanaCombo"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_whooperTexanaCombo"
+                    android:layout_width="226dp"
+                    android:layout_height="85dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="0.5"
+                    app:srcCompat="@mipmap/bk_whopper_texana_combo" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lbl_whooperTexanaCombo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:fontFamily="@font/work_sans_semibold"
+                        android:text="Whooper Texana Combo"
+                        android:textColor="#CF5F05"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/lbl_whooperTexanaComboDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/work_sans_medium"
+                        android:text="Nuestro WHOOPER texana es un ¼ lb de sabrosa carne de res asada a la parrilla cubierta con queso..."
+                        android:textColor="#261111"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/lbl_whooperTexanaComboPrecio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:fontFamily="@font/work_sans_semibold"
+                        android:text="L.215"
+                        android:textColor="#CF5F05"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_weight="0.5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/borde_redondeado"
+                android:onClick="bk_kingPolloCombo"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_kingPolloCombo"
+                    android:layout_width="226dp"
+                    android:layout_height="85dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="0.5"
+                    app:srcCompat="@mipmap/bk_king_de_pollo_combo" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lbl_kingPolloCombo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:fontFamily="@font/work_sans_semibold"
+                        android:text="King de Pollo Combo"
+                        android:textColor="#CF5F05"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/lbl_kingPolloComboDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/work_sans_medium"
+                        android:text="Sandwich de pollo, ligeramente empanizado y cubierto con una combinación de lechuga y cremosa..."
+                        android:textColor="#261111"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/lbl_kingPolloComboPrecio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:fontFamily="@font/work_sans_semibold"
+                        android:text="L.169"
+                        android:textColor="#CF5F05"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_weight="0.5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/borde_redondeado"
+                android:onClick="bk_kingPolloFrances"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_kingPolloFrances"
+                    android:layout_width="226dp"
+                    android:layout_height="85dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="0.5"
+                    app:srcCompat="@mipmap/bk_king_de_pollo_frances" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lbl_kingPolloFrances"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:fontFamily="@font/work_sans_semibold"
+                        android:text="King de Pollo Francés"
+                        android:textColor="#CF5F05"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/lbl_kingPolloFrancesDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/work_sans_medium"
+                        android:text="Sandwich de pollo, ligeramente empanizado y cubierto de una combinación de jamón, queso y..."
+                        android:textColor="#261111"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/lbl_kingPolloFrancesPrecio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:fontFamily="@font/work_sans_semibold"
+                        android:text="L.189"
+                        android:textColor="#CF5F05"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_weight="0.5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/borde_redondeado"
+                android:onClick="bk_rodeoBBQKing"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_rodeoBBQKing"
+                    android:layout_width="226dp"
+                    android:layout_height="85dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="0.5"
+                    app:srcCompat="@mipmap/bk_rodeo_bbq_king" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lbl_rodeoBBQKing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:fontFamily="@font/work_sans_semibold"
+                        android:text="Rodeo BBQ King"
+                        android:textColor="#CF5F05"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/lbl_rodeoBBQKingDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/work_sans_medium"
+                        android:text="Una hamburguesa con nuestros ingredientes favoritos, bacon, queso, aros de cebolla, con más de ¼ de..."
+                        android:textColor="#261111"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/lbl_rodeoBBQKingPrecio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:fontFamily="@font/work_sans_semibold"
+                        android:text="L.225"
+                        android:textColor="#CF5F05"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_weight="0.5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/borde_redondeado"
+                android:onClick="bk_comboParaTresJr"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_comboTresJr"
+                    android:layout_width="226dp"
+                    android:layout_height="85dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="0.5"
+                    app:srcCompat="@mipmap/bk_combo_para_tres_jr" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lbl_comboTresJr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:fontFamily="@font/work_sans_semibold"
+                        android:text="Combo para Tres Jr."
+                        android:textColor="#CF5F05"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/lbl_comboTresJrDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/work_sans_medium"
+                        android:text="Combo que incluye un King de Pollo y dos Whooper Jr. de carne de res asada a la parrilla acompañado de..."
+                        android:textColor="#261111"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/lbl_comboTresJrPrecio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:fontFamily="@font/work_sans_semibold"
+                        android:text="L.330"
+                        android:textColor="#CF5F05"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_weight="0.5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/borde_redondeado"
+                android:onClick="bk_megaKing"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_megaKing"
+                    android:layout_width="226dp"
+                    android:layout_height="85dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="0.5"
+                    app:srcCompat="@mipmap/bk_mega_king" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lbl_megaKing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:fontFamily="@font/work_sans_semibold"
+                        android:text="Mega King"
+                        android:textColor="#CF5F05"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/lbl_megaKingDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/work_sans_medium"
+                        android:text="Una opción familiar que te encantará. Disfruta de un delicioso Whooper, un King de Pollo y 2..."
+                        android:textColor="#261111"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/lbl_megaKingPrecio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:fontFamily="@font/work_sans_semibold"
+                        android:text="L.440"
+                        android:textColor="#CF5F05"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_weight="0.5" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@id/scrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            android:backgroundTint="#f6f6f6"
+            app:fabCradleMargin="8dp"
+            app:fabCradleRoundedCornerRadius="50dp"
+            app:fabCradleVerticalOffset="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginRight="14dp">
+
+                <LinearLayout
+                    android:id="@+id/inicioBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:onClick="inicio"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/btnHome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@mipmap/home" />
+
+                    <TextView
+                        android:id="@+id/lblInicio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/work_sans_semibold"
+                        android:text="Inicio"
+                        android:textAlignment="center"
+                        android:textColor="#261111"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/historialBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:onClick="historial"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/btnHistorial"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@mipmap/shopping_list" />
+
+                    <TextView
+                        android:id="@+id/lblHistorialPedidos2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/work_sans_semibold"
+                        android:text="Historial"
+                        android:textAlignment="center"
+                        android:textColor="#261111"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/invisibleBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:id="@+id/btnInvisible"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@mipmap/shopping_list" />
+
+                    <TextView
+                        android:id="@+id/lblInvisible"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Inicio"
+                        android:textAlignment="center"
+                        android:textColor="#676767"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/soporteBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:onClick="soporte"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/btnSupport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@mipmap/support" />
+
+                    <TextView
+                        android:id="@+id/lblSoporte"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/work_sans_semibold"
+                        android:text="Soporte"
+                        android:textAlignment="center"
+                        android:textColor="#261111"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/perfilBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:onClick="perfil"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/btnUser2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@mipmap/user2" />
+
+                    <TextView
+                        android:id="@+id/lblPerfil2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/work_sans_semibold"
+                        android:text="Perfil"
+                        android:textAlignment="center"
+                        android:textColor="#261111"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#ff5e00"
+            android:contentDescription="@string/descripcion"
+            android:elevation="3dp"
+            android:onClick="pedidos"
+            android:src="@mipmap/shopping_cart"
+            app:backgroundTint="#ff5e00"
+            app:layout_anchor="@id/app_bar">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

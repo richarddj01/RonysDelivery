@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.ronysdelivery">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.RonysDelivery"
+        tools:targetApi="31">
+        <activity
+            android:name=".Pedidos"
+            android:exported="false" />
+        <activity
+            android:name=".Soporte"
+            android:exported="false" />
+        <activity
+            android:name=".EditarPerfil"
+            android:exported="false" />
+        <activity
+            android:name=".Perfil"
+            android:exported="false" />
+        <activity
+            android:name=".PH_Pan_Pizza_Pack"
+            android:exported="false" />
+        <activity
+            android:name=".PH_Pizza_Suprema"
+            android:exported="false" />
+        <activity
+            android:name=".KFC_Trio_Kentucky"
+            android:exported="false" />
+        <activity
+            android:name=".KFC_Pake_Ahorres"
+            android:exported="false" />
+        <activity
+            android:name=".KFC_Mega_KFC"
+            android:exported="false" />
+        <activity
+            android:name=".KFC_K_Pack"
+            android:exported="false" />
+        <activity
+            android:name=".KFC_Combo_Kentaco"
+            android:exported="false" />
+        <activity
+            android:name=".KFC_Big_Box_2"
+            android:exported="false" />
+        <activity
+            android:name=".KFC_Big_Box"
+            android:exported="false" />
+        <activity
+            android:name=".Registrarse"
+            android:exported="false" />
+        <activity
+            android:name=".IniciarSesion"
+            android:exported="false" />
+        <activity
+            android:name=".PH_Hut_Boneless_Familiar"
+            android:exported="false" />
+        <activity
+            android:name=".HistorialPedidos"
+            android:exported="false" />
+        <activity
+            android:name=".PH_Pizza_Personal_Doble"
+            android:exported="false" />
+        <activity
+            android:name=".PH_Pizza_4_Estaciones"
+            android:exported="false" />
+        <activity
+            android:name=".PH_My_Box"
+            android:exported="false" />
+        <activity
+            android:name=".BK_WhooperTexanaCombo"
+            android:exported="false" />
+        <activity
+            android:name=".BK_Rodeo_BBQ_King"
+            android:exported="false" />
+        <activity
+            android:name=".BK_Mega_King"
+            android:exported="false" />
+        <activity
+            android:name=".BK_King_de_Pollo_Frances"
+            android:exported="false" />
+        <activity
+            android:name=".BK_King_de_Pollo_Combo"
+            android:exported="false" />
+        <activity
+            android:name=".BK_Combo_para_Tres"
+            android:exported="false" />
+        <activity
+            android:name=".BK_WhopperCombo"
+            android:exported="false" />
+        <activity
+            android:name=".Intro"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PizzaHut"
+            android:exported="false" />
+        <activity
+            android:name=".KFC"
+            android:exported="false" />
+        <activity
+            android:name=".BurgerKing"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
