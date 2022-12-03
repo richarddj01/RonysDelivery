@@ -288,7 +288,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.3"
-                        android:hint="1"
                         android:textAlignment="center"
                         android:textSize="34sp" />
 
@@ -310,6 +309,7 @@
                     android:background="@drawable/borde_redondeado"
                     android:hint="L.290"
                     android:paddingTop="7dp"
+                    android:text="L.290"
                     android:textAlignment="center"
                     android:textSize="24sp" />
 

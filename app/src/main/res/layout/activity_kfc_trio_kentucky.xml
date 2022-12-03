@@ -419,7 +419,6 @@
                     android:layout_marginLeft="37dp"
                     android:layout_weight="1"
                     android:background="@drawable/borde_redondeado"
-                    android:hint="L. 205"
                     android:paddingTop="7dp"
                     android:textAlignment="center"
                     android:textSize="24sp" />
