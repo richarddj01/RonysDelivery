@@ -16,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class KFC_Big_Box extends AppCompatActivity {
     private RadioButton Crb1,Crb2,Crb3,Rprb1,Rprb2,Rprb3,Csrb1,Csrb2,Csrb3,Brb1,Brb2,Brb3,Brb4;
-    private TextView lbl_cantidad,lbl_titulo,lbl_total,lbl_NombreCombo;
+    private TextView lbl_cantidad,lbl_titulo,lbl_total,lbl_NombreCombo, restaurante;
     private int cantidad;
     private TextView precio;
     private TextView total;
@@ -27,7 +27,6 @@ public class KFC_Big_Box extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kfc_big_box);
 
-        txtPrueba = (TextView) findViewById(R.id.txtprueba);
     }
 
     public void inicio(View view) {
@@ -124,6 +123,7 @@ public class KFC_Big_Box extends AppCompatActivity {
         lbl_titulo = (TextView) findViewById(R.id.lbl_titulo);
         lbl_cantidad = (TextView) findViewById(R.id.lbl_cantidad);
         precio = (TextView)  findViewById(R.id.lbl_comboPrecio);
+
         String correo;
         AdminSQLiteOpen Bd = new AdminSQLiteOpen(this, "RonysDelivery", null,1);//objeto clase
         SQLiteDatabase BasedeDatos = Bd.getWritableDatabase();//escritura BD
@@ -147,6 +147,9 @@ public class KFC_Big_Box extends AppCompatActivity {
 
         Toast.makeText(this,"DATOS GUARDADOS", Toast.LENGTH_SHORT).show();
         BasedeDatos.insert("Pedidos", null, registro);
+
+        herramientas.recibirDatosPedido(Cantidad, Total, NombreCombo, "KFC");
+        startActivity(new Intent(this, Pedidos.class));
     }
 
     public void Buscar(View view)
