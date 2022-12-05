@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/back_degradado"
+    android:onClick="productoDisminuir"
     tools:context=".PH_Pizza_4_Estaciones">
 
     <ScrollView
@@ -150,7 +151,7 @@
                     <RadioGroup
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1" >
+                        android:layout_weight="1">
 
                         <RadioButton
                             android:id="@+id/rb_arosCebolla"
@@ -241,7 +242,7 @@
                     <RadioGroup
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1" >
+                        android:layout_weight="1">
 
                         <RadioButton
                             android:id="@+id/rb_cocaCola"
@@ -332,7 +333,7 @@
                     <RadioGroup
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1" >
+                        android:layout_weight="1">
 
                         <RadioButton
                             android:id="@+id/rb_Nuggets"
@@ -404,7 +405,7 @@
                     <RadioGroup
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1" >
+                        android:layout_weight="1">
 
                         <RadioButton
                             android:id="@+id/rb_hersheyPie"
@@ -468,6 +469,7 @@
                         android:layout_marginLeft="1dp"
                         android:layout_marginTop="5dp"
                         android:layout_weight="0.3"
+                        android:onClick="productoDisminuir"
                         app:srcCompat="@mipmap/menos" />
 
                     <TextView
@@ -485,6 +487,7 @@
                         android:layout_height="35dp"
                         android:layout_marginTop="5dp"
                         android:layout_weight="0.3"
+                        android:onClick="productoAumentar"
                         app:srcCompat="@mipmap/suma" />
                 </LinearLayout>
 
@@ -496,6 +499,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/borde_redondeado"
                     android:paddingTop="7dp"
+                    android:text="L.318"
                     android:textAlignment="center"
                     android:textSize="24sp" />
 

@@ -71,6 +71,9 @@
             android:name=".PH_Pizza_Personal_Doble"
             android:exported="false" />
         <activity
+            android:name=".PH_Triple_Wow_Box"
+            android:exported="false" />
+        <activity
             android:name=".PH_Pizza_4_Estaciones"
             android:exported="false" />
         <activity

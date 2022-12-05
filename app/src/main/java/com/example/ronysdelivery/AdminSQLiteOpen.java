@@ -19,7 +19,7 @@ public class AdminSQLiteOpen extends SQLiteOpenHelper {
         BaseDeDatos.execSQL("create table Restaurantes(ResCodigo INTEGER primary key autoincrement, ResNombre text, ResDireccion text, ResTelefono int, ResCorreo text)");
         BaseDeDatos.execSQL("CREATE TABLE IF NOT EXISTS CombosEncabezado ( CmbCodigo	INTEGER NOT NULL, CmbNombre	TEXT, CmbDescripcion	TEXT, CmbPrecio	REAL, ResCodigo	INTEGER, FOREIGN KEY(ResCodigo) REFERENCES Restaurantes(ResCodigo), PRIMARY KEY(CmbCodigo)); ");
         BaseDeDatos.execSQL("create table CombosDetalle(CmbCodigo int primary key, PrdCodigo int, CmbCantidad int)");
-        BaseDeDatos.execSQL("CREATE TABLE Pedidos (PedCodigo	INTEGER primary key autoincrement, Combo	TEXT , PedCantidad	INTEGER, PedPrecio	REAL, UsuCorreo TEXT)");
+        BaseDeDatos.execSQL("CREATE TABLE Pedidos (PedCodigo	INTEGER primary key autoincrement, Combo	TEXT , PedCantidad	INTEGER, PedPrecio	REAL, UsuCorreo TEXT, Fecha TEXT, Restaurante TEXT)");
     }
 
     @Override
