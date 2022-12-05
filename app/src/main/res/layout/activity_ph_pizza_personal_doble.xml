@@ -337,7 +337,7 @@
                         <RadioButton
                             android:id="@+id/cb_Nuggets"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="23dp"
                             android:layout_weight="1"
                             android:onClick="radioSeleccionado20"
                             android:text="Salsa Ranch                                                  + L.20.00" />
@@ -345,7 +345,7 @@
                         <RadioButton
                             android:id="@+id/rb_extraTocino"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="23dp"
                             android:layout_weight="1"
                             android:onClick="radioSeleccionado22"
                             android:text="Extra Peperoni                                              + L.22.00" />
@@ -353,7 +353,7 @@
                         <RadioButton
                             android:id="@+id/rb_extraQueso"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="23dp"
                             android:layout_weight="1"
                             android:onClick="radioSeleccionado12"
                             android:text="Extra Queso                                                  + L.12.00" />
@@ -514,6 +514,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/borde_redondeado_cafe"
                 android:fontFamily="@font/work_sans_bold"
+                android:onClick="InsertarPedido"
                 android:paddingTop="10dp"
                 android:text="Agregar al Pedido"
                 android:textAlignment="center"

@@ -1,14 +1,19 @@
 package com.example.ronysdelivery;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.RadioButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class KFC_K_Pack extends AppCompatActivity {
-    private TextView lbl_cantidad;
+    private TextView lbl_cantidad,lbl_titulo,lbl_total,lbl_NombreCombo;
     private int cantidad;
     private TextView precio;
     private TextView total;
@@ -67,4 +72,34 @@ public class KFC_K_Pack extends AppCompatActivity {
         total = (TextView) findViewById(R.id.lbl_total);
         total.setText(herramientas.calcularTotal(view, price));
     }
+    public void InsertarPedido(View view)
+    {
+        lbl_titulo = (TextView) findViewById(R.id.lbl_titulo);
+        lbl_cantidad = (TextView) findViewById(R.id.lbl_cantidad);
+        precio = (TextView)  findViewById(R.id.lbl_comboPrecio);
+        String correo;
+        AdminSQLiteOpen Bd = new AdminSQLiteOpen(this, "RonysDelivery", null,1);//objeto clase
+        SQLiteDatabase BasedeDatos = Bd.getWritableDatabase();//escritura BD
+
+        // Restaurante = ob_codigo.getText().toString();//obtenemos el codigo ingresado en el teclado
+        String NombreCombo = lbl_titulo.getText().toString();
+        String Total = precio.getText().toString();
+        String Cantidad = lbl_cantidad.getText().toString();
+        //String NombreCom = lbl_NombreCombo.getText().toString();
+        //String SubTotal = ob_campus.getText().toString();
+
+        correo = herramientas.Correo();
+        ContentValues registro = new ContentValues();
+        //registro.put("PedCodigo",1);
+        registro.put("Combo", NombreCombo);
+        registro.put("PedCantidad", Integer.valueOf(Cantidad));
+        registro.put("PedPrecio", Float.parseFloat(Total.substring(2)));
+        registro.put("UsuCorreo", correo);
+
+        //NombreCombo
+
+        Toast.makeText(this,"DATOS GUARDADOS", Toast.LENGTH_SHORT).show();
+        BasedeDatos.insert("Pedidos", null, registro);
+    }
+
 }

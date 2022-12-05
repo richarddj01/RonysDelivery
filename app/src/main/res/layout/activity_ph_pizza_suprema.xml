@@ -328,6 +328,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/borde_redondeado_cafe"
                 android:fontFamily="@font/work_sans_bold"
+                android:onClick="InsertarPedido"
                 android:paddingTop="10dp"
                 android:text="Agregar al Pedido"
                 android:textAlignment="center"
