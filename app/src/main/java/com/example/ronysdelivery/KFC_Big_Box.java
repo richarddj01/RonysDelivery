@@ -5,9 +5,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.renderscript.ScriptIntrinsicYuvToRGB;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.RadioButton;
 import android.widget.Toast;
@@ -40,7 +38,7 @@ public class KFC_Big_Box extends AppCompatActivity {
     }
 
     public void pedidos(View view) {
-        Intent pagina = new Intent(this, Pedidos.class);
+        Intent pagina = new Intent(this, Pedidos2.class);
         startActivity(pagina);
     }
 
@@ -149,7 +147,7 @@ public class KFC_Big_Box extends AppCompatActivity {
         BasedeDatos.insert("Pedidos", null, registro);
 
         herramientas.recibirDatosPedido(Cantidad, Total, NombreCombo, "KFC");
-        startActivity(new Intent(this, Pedidos.class));
+        startActivity(new Intent(this, Pedidos2.class));
     }
 
     public void Buscar(View view)

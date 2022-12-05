@@ -1,19 +1,15 @@
 package com.example.ronysdelivery;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class Pedidos extends AppCompatActivity {
+public class Pedidos2 extends AppCompatActivity {
 
     private TextView lbl_cantidad,lbl_restaurante,lbl_total,lbl_NombreCombo, subtotal, serv_entrega, isv, total;
 
@@ -21,7 +17,7 @@ public class Pedidos extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pedidos);
+        setContentView(R.layout.activity_pedidos2);
         Herramientas herramientas = new Herramientas();
         ArrayList<String> datos = herramientas.datosPedido();
         lbl_cantidad = (TextView) findViewById(R.id.lbl_Cantidad);

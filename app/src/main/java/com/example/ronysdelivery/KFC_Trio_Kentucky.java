@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,7 +34,7 @@ public class KFC_Trio_Kentucky extends AppCompatActivity {
     }
 
     public void pedidos(View view) {
-        Intent pagina = new Intent(this, Pedidos.class);
+        Intent pagina = new Intent(this, Pedidos2.class);
         startActivity(pagina);
     }
 

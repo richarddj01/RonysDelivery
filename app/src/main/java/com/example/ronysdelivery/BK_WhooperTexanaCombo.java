@@ -25,7 +25,7 @@ public class BK_WhooperTexanaCombo extends AppCompatActivity {
     }
 
     public void pedidos(View view) {
-        Intent pagina = new Intent(this, Pedidos.class);
+        Intent pagina = new Intent(this, Pedidos2.class);
         startActivity(pagina);
     }
 

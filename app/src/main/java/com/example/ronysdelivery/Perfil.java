@@ -3,12 +3,9 @@ package com.example.ronysdelivery;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class Perfil extends AppCompatActivity {
 
@@ -26,7 +23,7 @@ public class Perfil extends AppCompatActivity {
     }
 
     public void pedidos(View view) {
-        Intent pagina = new Intent(this, Pedidos.class);
+        Intent pagina = new Intent(this, Pedidos2.class);
         startActivity(pagina);
     }
 

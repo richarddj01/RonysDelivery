@@ -17,7 +17,7 @@
         android:theme="@style/Theme.RonysDelivery"
         tools:targetApi="31">
         <activity
-            android:name=".Pedidos"
+            android:name=".Pedidos2"
             android:exported="false" />
         <activity
             android:name=".Soporte"
