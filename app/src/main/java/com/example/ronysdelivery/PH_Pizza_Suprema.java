@@ -122,5 +122,8 @@ public class PH_Pizza_Suprema extends AppCompatActivity {
 
         Toast.makeText(this,"DATOS GUARDADOS", Toast.LENGTH_SHORT).show();
         BasedeDatos.insert("Pedidos", null, registro);
+
+        herramientas.recibirDatosPedido(Cantidad, Total, NombreCombo, "Pizza Hut");
+        startActivity(new Intent(this, Pedidos2.class));
     }
 }

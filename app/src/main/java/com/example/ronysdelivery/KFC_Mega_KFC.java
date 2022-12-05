@@ -98,5 +98,8 @@ public class KFC_Mega_KFC extends AppCompatActivity {
 
         Toast.makeText(this,"DATOS GUARDADOS", Toast.LENGTH_SHORT).show();
         BasedeDatos.insert("Pedidos", null, registro);
+
+        herramientas.recibirDatosPedido(Cantidad, Total, NombreCombo, "KFC");
+        startActivity(new Intent(this, Pedidos2.class));
     }
 }
