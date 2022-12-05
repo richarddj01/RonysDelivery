@@ -41,6 +41,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp" />
 
+            <TextView
+                android:id="@+id/txtprueba"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -516,6 +522,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/borde_redondeado_cafe"
                 android:fontFamily="@font/work_sans_bold"
+                android:onClick="InsertarPedido"
                 android:paddingTop="10dp"
                 android:text="Agregar al Pedido"
                 android:textAlignment="center"

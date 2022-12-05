@@ -28,11 +28,11 @@ public class Intro extends AppCompatActivity {
     }
 
     public void iniciarSesion(View view) {
-        Intent pagina = new Intent(this, IniciarSesion.class);
+        Intent pagina = new Intent(this, KFC.class);
         startActivity(pagina);
     }
     public void llevarKFC(View view) {
-        Intent pagina = new Intent(this, KFC.class);
+        Intent pagina = new Intent(this, IniciarSesion.class);
         startActivity(pagina);
     }
 }

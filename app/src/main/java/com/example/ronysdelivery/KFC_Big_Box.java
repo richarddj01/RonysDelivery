@@ -1,38 +1,33 @@
 package com.example.ronysdelivery;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.renderscript.ScriptIntrinsicYuvToRGB;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class KFC_Big_Box extends AppCompatActivity {
     private RadioButton Crb1,Crb2,Crb3,Rprb1,Rprb2,Rprb3,Csrb1,Csrb2,Csrb3,Brb1,Brb2,Brb3,Brb4;
-    private TextView lbl_cantidad;
+    private TextView lbl_cantidad,lbl_titulo,lbl_total,lbl_NombreCombo;
     private int cantidad;
     private TextView precio;
     private TextView total;
+    private TextView txtPrueba;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kfc_big_box);
 
-        Crb1 = findViewById(R.id.rb_pureDePapa);
-        Crb2 =findViewById(R.id.rb_ensalada);
-        Crb3 = findViewById(R.id.rb_papaIndividual);
-        Rprb1 = findViewById(R.id.rb_piezaCrispy);
-        Rprb2 =findViewById(R.id.rb_piezaOriginal);
-        Rprb3 =findViewById(R.id.rb_piezaPicante);
-        Csrb1 =findViewById(R.id.rb_papaIndividual2);
-        Csrb2 =findViewById(R.id.rb_pureDePapa2);
-        Csrb3 =findViewById(R.id.rb_ensalada2);
-        Brb1=findViewById(R.id.rb_mirinda);
-        Brb2=findViewById(R.id.rb_7up);
-        Brb3=findViewById(R.id.rb_pepsi);
-        Brb4=findViewById(R.id.rb_Agua);
+        txtPrueba = (TextView) findViewById(R.id.txtprueba);
     }
 
     public void inicio(View view) {
@@ -122,5 +117,65 @@ public class KFC_Big_Box extends AppCompatActivity {
         String price = precio.getText().toString();
         total = (TextView) findViewById(R.id.lbl_total);
         total.setText(herramientas.calcularTotal(view, price));
+    }
+
+    public void InsertarPedido(View view)
+    {
+        lbl_titulo = (TextView) findViewById(R.id.lbl_titulo);
+        lbl_cantidad = (TextView) findViewById(R.id.lbl_cantidad);
+        precio = (TextView)  findViewById(R.id.lbl_comboPrecio);
+        String correo;
+        AdminSQLiteOpen Bd = new AdminSQLiteOpen(this, "RonysDelivery", null,1);//objeto clase
+        SQLiteDatabase BasedeDatos = Bd.getWritableDatabase();//escritura BD
+
+        // Restaurante = ob_codigo.getText().toString();//obtenemos el codigo ingresado en el teclado
+        String NombreCombo = lbl_titulo.getText().toString();
+        String Total = precio.getText().toString();
+        String Cantidad = lbl_cantidad.getText().toString();
+        //String NombreCom = lbl_NombreCombo.getText().toString();
+        //String SubTotal = ob_campus.getText().toString();
+
+        correo = herramientas.Correo();
+        ContentValues registro = new ContentValues();
+        //registro.put("PedCodigo",1);
+        registro.put("Combo", NombreCombo);
+        registro.put("PedCantidad", Integer.valueOf(Cantidad));
+        registro.put("PedPrecio", Float.parseFloat(Total.substring(2)));
+        registro.put("UsuCorreo", correo);
+
+        //NombreCombo
+
+        Toast.makeText(this,"DATOS GUARDADOS", Toast.LENGTH_SHORT).show();
+        BasedeDatos.insert("Pedidos", null, registro);
+    }
+
+    public void Buscar(View view)
+    {
+        AdminSQLiteOpen admin = new AdminSQLiteOpen(this, "RonysDelivery", null, 1);
+        SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
+
+        //String correo = ob_correo.getText().toString();
+        //String contrasena = ob_contrasena.getText().toString();
+
+            Cursor fila = BaseDeDatos.rawQuery("select CliNombreApellido from Clientes where CliCodigo = 1", null);
+
+            if (fila.moveToFirst()) {
+                txtPrueba.setText(fila.getString(0));
+            }
+            /*
+            if (fila.moveToFirst()) {
+                if (.contentEquals(contrasena)) {
+                    Intent pagina = new Intent(this, MainActivity.class);
+                    startActivity(pagina);
+                }
+                else {
+                    Toast.makeText(this, "CONTRASEÑA INCORRECTA", Toast.LENGTH_SHORT).show();
+                }
+            }
+            else {
+                Toast.makeText(this, "CORREO ELECTRÓNICO NO ENCONTRADO", Toast.LENGTH_SHORT).show();
+            }
+            */
+
     }
 }

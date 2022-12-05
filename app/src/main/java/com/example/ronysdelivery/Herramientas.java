@@ -6,6 +6,7 @@ import android.widget.TextView;
 public class Herramientas {
     private TextView lbl_cantidad;
     public int cantidad;
+    public static String correo;
 
     public String productoAumentar(View view,String cant){
         cantidad = Integer.parseInt(cant);
@@ -31,5 +32,11 @@ public class Herramientas {
         String Total = String.valueOf(total);
         Total = "L."+Total ;
         return Total;
+    }
+    public void recibirCorreo(String mail){
+        correo = mail;
+    }
+    public String Correo(){
+        return correo;
     }
 }

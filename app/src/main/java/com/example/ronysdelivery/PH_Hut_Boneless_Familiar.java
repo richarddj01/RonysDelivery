@@ -106,9 +106,7 @@ public class PH_Hut_Boneless_Familiar extends AppCompatActivity {
         {
             total.setText(herramientas.calcularTotal(view, String.valueOf(precioConComplemento)));
         }else{
-
             total.setText(herramientas.calcularTotal(view, price));
         }
     }
-
 }

@@ -294,7 +294,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="15dp"
                 android:layout_weight="0.5" />
 
             <LinearLayout
@@ -337,7 +337,7 @@
                         <RadioButton
                             android:id="@+id/rb_Nuggets"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="27dp"
                             android:layout_weight="1"
                             android:onClick="radioSeleccionado20"
                             android:text="Salsa Ranch                                                  + L.20.00" />
@@ -345,7 +345,7 @@
                         <RadioButton
                             android:id="@+id/rb_extraTocino"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="23dp"
                             android:layout_weight="1"
                             android:onClick="radioSeleccionado22"
                             android:text="RadioButton"
@@ -354,7 +354,7 @@
                         <RadioButton
                             android:id="@+id/rb_extraQueso"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="25dp"
                             android:layout_weight="1"
                             android:onClick="radioSeleccionado12"
                             android:text="Extra Queso                                                  + L.12.00" />

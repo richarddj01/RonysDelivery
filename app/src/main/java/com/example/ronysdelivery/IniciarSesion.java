@@ -43,6 +43,12 @@ public class IniciarSesion extends AppCompatActivity {
             if (fila.moveToFirst()) {
                 if (fila.getString(1).contentEquals(contrasena)) {
                     Intent pagina = new Intent(this, MainActivity.class);
+
+                    //Codigo para mandar correo a registrar pedido:
+                    Herramientas herramientas = new Herramientas();
+                    herramientas.recibirCorreo(correo);
+                    ////////////////////////////////
+
                     startActivity(pagina);
                 }
                 else {

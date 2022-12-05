@@ -15,14 +15,11 @@ public class AdminSQLiteOpen extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase BaseDeDatos) {
         BaseDeDatos.execSQL("CREATE TABLE Usuarios (UsuCorreo TEXT NOT NULL, UsuContrasena TEXT NOT NULL, PRIMARY KEY(UsuCorreo));");
         BaseDeDatos.execSQL("CREATE TABLE Clientes (CliCodigo INTEGER PRIMARY KEY AUTOINCREMENT, CliNombreApellido TEXT NOT NULL, CliTelefono INTEGER NOT NULL, CliDireccion TEXT NOT NULL, UsuCorreo TEXT NOT NULL, FOREIGN KEY(UsuCorreo) REFERENCES Usuarios(UsuCorreo));");
-        /*BaseDeDatos.execSQL("create table Clientes(CliCodigo int primary key autoincrement, CliNombreApellido text, CliTelefono int, CliDireccion text, UsuCorreo text)");
-        BaseDeDatos.execSQL("create table Usuarios(UsuCorreo text primary key, UsuContrasena text)");
-        BaseDeDatos.execSQL("create table Productos(PrdCodigo int primary key autoincrement, PrdNombre text, PrdDescripcion text, PrdPrecio real)");
-        BaseDeDatos.execSQL("create table Restaurantes(ResCodigo int primary key autoincrement, ResNombre text, ResDireccion text, ResTelefono int, ResCorreo text)");
-        BaseDeDatos.execSQL("create table CombosEncabezado(CmbCodigo int primary key, CmbNombre text, CmbDescripcion text, CmbPrecio real, ResCodigo int)");
-        BaseDeDatos.execSQL("create table PedidosEncabezado(PedCodigo int primary key, ResCodigo int, CliCodigo int, PedFechaHora text, PedDescripcion text)");
-        BaseDeDatos.execSQL("create table CombosDetalle(CmbCodigo int primary key, PrdCodigo int primary key, CmbCantidad int)");
-        BaseDeDatos.execSQL("create table PedidosDetalle(PedCodigo int primary key, CmbCodigo int primary key, PedCantidad int, PedPrecio real)");*/
+        BaseDeDatos.execSQL("create table Productos(PrdCodigo INTEGER primary key autoincrement, PrdNombre text, PrdDescripcion text, PrdPrecio real)");
+        BaseDeDatos.execSQL("create table Restaurantes(ResCodigo INTEGER primary key autoincrement, ResNombre text, ResDireccion text, ResTelefono int, ResCorreo text)");
+        BaseDeDatos.execSQL("CREATE TABLE IF NOT EXISTS CombosEncabezado ( CmbCodigo	INTEGER NOT NULL, CmbNombre	TEXT, CmbDescripcion	TEXT, CmbPrecio	REAL, ResCodigo	INTEGER, FOREIGN KEY(ResCodigo) REFERENCES Restaurantes(ResCodigo), PRIMARY KEY(CmbCodigo)); ");
+        BaseDeDatos.execSQL("create table CombosDetalle(CmbCodigo int primary key, PrdCodigo int, CmbCantidad int)");
+        BaseDeDatos.execSQL("CREATE TABLE Pedidos (PedCodigo	INTEGER primary key autoincrement, Combo	TEXT , PedCantidad	INTEGER, PedPrecio	REAL, UsuCorreo TEXT)");
     }
 
     @Override
